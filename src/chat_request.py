@@ -16,7 +16,8 @@ def get_embedding(question: str):
     connection = AzureOpenAIConnection(        
                     azure_deployment=os.getenv("AZURE_OPENAI_EMBEDDING_DEPLOYMENT", ""),
                     api_version=os.getenv("AZURE_OPENAI_API_VERSION", ""),
-                    api_base=os.getenv("AZURE_OPENAI_ENDPOINT", "")
+                    api_base=os.getenv("AZURE_OPENAI_ENDPOINT", ""),
+                    api_key=os.environ.get("AZURE_OPENAI_API_KEY")
                     )
                 
     client = init_azure_openai_client(connection)
