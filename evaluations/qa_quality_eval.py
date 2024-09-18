@@ -41,7 +41,7 @@ def main():
         },
         stream=True,
     )
-    
+        
     responses = pf.get_details(base_run)
     print(responses.head(10))
 
