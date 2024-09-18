@@ -37,7 +37,8 @@ def get_response(question, chat_history):
     configuration = AzureOpenAIModelConfiguration(
         azure_deployment=os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT", ""),
         api_version=os.getenv("AZURE_OPENAI_API_VERSION", ""),
-        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT", "")
+        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT", ""),
+        api_key=os.environ.get("AZURE_OPENAI_API_KEY")
     )
     override_model = {
         "configuration": configuration,
