@@ -16,6 +16,11 @@ inputs:
     type: object
   question:
     type: string
+outputs:
+  answer:
+    type: string
+  context:
+    type: object
 sample: chat.json
 ---
 system:
